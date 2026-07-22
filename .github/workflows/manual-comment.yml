@@ -8,12 +8,19 @@ on:
   workflow_dispatch:
 
 jobs:
+  
   create_comment:
     runs-on: ubuntu-latest
     steps:
-      - name: add comment (testing)
+      - name: generate token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.app_client_id }}
+          private-key: ${{ secrets.app_private_key }}
+      - name: add comment
         uses: peter-evans/create-or-update-comment@v5.0.0
         with:
-          token: ${{ secrets.app_token }}
+          token: ${{ steps.generate-token.outputs.token }}
           issue-number: ${{ env.PR_ID }}
           body: $${{ env.COMMENT }}
