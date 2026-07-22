@@ -8,6 +8,7 @@ jobs:
   
   create_comment:
     runs-on: ubuntu-latest
+    if: ${{ github.event.comment.user.login != 'business-requirement-manager[bot]' }}
     steps:
       - name: generate token
         id: generate-token
