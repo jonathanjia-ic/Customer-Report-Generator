@@ -19,4 +19,4 @@ jobs:
         with:
           token: ${{ steps.generate-token.outputs.token }}
           issue-number: ${{ vars.manual_comment_pr_id }}
-          body: $${{ vars.manual_comment_contents }}
+          body: ${{ vars.manual_comment_contents }}
