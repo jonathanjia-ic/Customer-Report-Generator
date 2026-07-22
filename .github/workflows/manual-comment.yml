@@ -1,9 +1,5 @@
 name: manually add a comment
 
-env:
-  COMMENT: "Hi there!"
-  PR_ID: 1
-
 on:
   workflow_dispatch:
 
@@ -22,5 +18,5 @@ jobs:
         uses: peter-evans/create-or-update-comment@v5.0.0
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          issue-number: ${{ env.PR_ID }}
-          body: $${{ env.COMMENT }}
+          issue-number: ${{ vars.manual_comment_pr_id }}
+          body: $${{ vars.manual_comment_contents }}
