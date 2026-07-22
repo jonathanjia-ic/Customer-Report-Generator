@@ -1,0 +1,23 @@
+name: automatically add a comment
+
+on:
+  issue_comment:
+    types: created
+
+jobs:
+  
+  create_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.app_client_id }}
+          private-key: ${{ secrets.app_private_key }}
+      - name: add comment
+        uses: peter-evans/create-or-update-comment@v5.0.0
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          issue-number: ${{ github.event.issue.number }}
+          body: ${{ vars.automatic_comment_contents }}
