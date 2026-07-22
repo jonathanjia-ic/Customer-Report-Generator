@@ -1,0 +1,19 @@
+name: manually add a comment
+
+env:
+  COMMENT: "Hi there!"
+  PR_ID: 1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: add comment (testing)
+        uses: peter-evans/create-or-update-comment@v5.0.0
+        with:
+          token: ${{ secrets.app_token }}
+          issue-number: ${{ env.PR_ID }}
+          body: $${{ env.COMMENT }}
