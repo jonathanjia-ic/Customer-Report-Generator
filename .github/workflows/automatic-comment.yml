@@ -1,7 +1,8 @@
-name: manually add a comment
+name: automatically add a comment
 
 on:
-  workflow_dispatch:
+  issue_comment:
+    types: created
 
 jobs:
   
@@ -18,5 +19,5 @@ jobs:
         uses: peter-evans/create-or-update-comment@v5.0.0
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          issue-number: ${{ vars.manual_comment_pr_id }}
-          body: ${{ vars.manual_comment_contents }}
+          issue-number: ${{ github.event.issue.number }}
+          body: ${{ vars.automatic_comment_contents }}
