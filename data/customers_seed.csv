@@ -1,0 +1,13 @@
+customer_id,first_name,last_name,date_of_birth,email,segment,residency_status,address_line1,suburb,city,state,postcode,total_balance,products
+C0001,Olivia,Nguyen,1988-03-14,olivia.nguyen@example.com,retail,permanent,12 Lygon St,Carlton,Melbourne,VIC,3053,15230.55,transaction|savings
+C0002,Liam,Chen,1979-11-02,liam.chen@example.com,premier,temporary,88 Swan St,Richmond,Melbourne,VIC,3121,204880.10,transaction|home_loan
+C0003,Charlotte,Smith,1992-07-21,charlotte.smith@example.com,retail,permanent,5 Chapel St,South Yarra,Melbourne,VIC,3141,4200.00,transaction
+C0004,Noah,Patel,1985-01-30,noah.patel@example.com,retail,non_resident,220 Barkly St,Footscray,Melbourne,VIC,3011,980.25,savings
+C0005,Amelia,Wilson,1990-09-09,amelia.wilson@example.com,premier,permanent,3 Acland St,St Kilda,Melbourne,VIC,3182,88710.00,transaction|home_loan|savings
+C0006,Jack,Kumar,1975-05-18,jack.kumar@example.com,business,permanent,17 Sydney Rd,Brunswick,Melbourne,VIC,3056,331200.75,transaction|home_loan
+C0007,Isla,Brown,1998-12-05,isla.brown@example.com,retail,unknown,64 High St,Preston,Melbourne,VIC,3072,150.00,transaction
+C0008,William,Tran,1983-06-27,william.tran@example.com,retail,permanent,9 Glenferrie Rd,Hawthorn,Melbourne,VIC,3122,26540.40,transaction|savings
+C0009,Mia,Roberts,1995-04-12,mia.roberts@example.com,premier,permanent,41 George St,Sydney,Sydney,NSW,2000,73210.00,transaction|home_loan
+C0010,Ethan,Lee,1981-08-23,ethan.lee@example.com,retail,temporary,102 Church St,Parramatta,Sydney,NSW,2150,5600.00,transaction
+C0011,Grace,Taylor,1993-02-16,grace.taylor@example.com,retail,permanent,7 Bourke St,Melbourne,Melbourne,VIC,3000,19980.00,transaction|savings
+C0012,Lucas,Singh,1987-10-08,lucas.singh@example.com,business,permanent,55 Whitehorse Rd,Box Hill,Melbourne,VIC,3128,142300.00,transaction|home_loan
