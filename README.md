@@ -1,4 +1,4 @@
-# Customer Report Generator
+# Region Based Customer Reporting
 
 Internal reporting service for generating customer reports from multiple upstream
 data sources. Reports are produced on demand or on a regular schedule and are

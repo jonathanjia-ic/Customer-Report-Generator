@@ -1,7 +1,7 @@
 [project]
-name = "customer-report-generator"
+name = "region-based-customer-reporting"
 version = "1.4.2"
-description = "Internal customer report generator"
+description = "Internal region based customer reporting"
 requires-python = ">=3.10"
 authors = [{ name = "Customer Insights", email = "customer-insights@example.internal" }]
 dependencies = [

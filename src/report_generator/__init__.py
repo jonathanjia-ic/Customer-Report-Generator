@@ -1,4 +1,4 @@
-"""Customer Report Generator.
+"""Region Based Customer Reporting.
 
 Internal service for producing customer reports from upstream source systems.
 """

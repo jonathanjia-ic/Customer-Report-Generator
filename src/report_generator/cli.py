@@ -1,4 +1,4 @@
-"""Command line entry point for the Customer Report Generator."""
+"""Command line entry point for Region Based Customer Reporting."""
 
 from __future__ import annotations
 
