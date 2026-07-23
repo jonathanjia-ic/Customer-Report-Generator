@@ -1,0 +1,13 @@
+record_id,name,category,created_on,site,region,zone,code,value,status,tags
+R0001,Record 0001,alpha,2023-03-14,Site A,north,Z1,N001,15230.55,active,standard
+R0002,Record 0002,beta,2023-11-02,Site B,north,Z1,N002,204880.10,pending,priority|review
+R0003,Record 0003,alpha,2023-07-21,Site C,north,Z2,N003,4200.00,active,standard
+R0004,Record 0004,gamma,2023-01-30,Site D,north,Z2,N004,980.25,inactive,archived
+R0005,Record 0005,beta,2023-09-09,Site E,north,Z3,N005,88710.00,active,priority|standard
+R0006,Record 0006,gamma,2023-05-18,Site F,north,Z3,N006,331200.75,active,priority
+R0007,Record 0007,alpha,2023-12-05,Site G,north,Z4,N007,150.00,pending,review
+R0008,Record 0008,alpha,2023-06-27,Site H,north,Z4,N008,26540.40,active,standard
+R0009,Record 0009,beta,2023-04-12,Site I,south,Z5,S001,73210.00,active,priority
+R0010,Record 0010,alpha,2023-08-23,Site J,south,Z5,S002,5600.00,pending,standard
+R0011,Record 0011,alpha,2023-02-16,Site K,east,Z6,E001,19980.00,active,standard
+R0012,Record 0012,gamma,2023-10-08,Site L,west,Z7,W001,142300.00,active,priority

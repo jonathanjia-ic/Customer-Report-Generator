@@ -16,7 +16,7 @@ class Settings:
     output_dir: Path
     log_level: str
     sources: dict = field(default_factory=dict)
-    reports: dict = field(default_factory=dict)
+    views: dict = field(default_factory=dict)
 
     @classmethod
     def load(cls, path: Path | None = None) -> "Settings":
@@ -24,10 +24,10 @@ class Settings:
         with open(path, "r", encoding="utf-8") as fh:
             raw = yaml.safe_load(fh)
 
-        output_dir = Path(os.getenv("REPORT_OUTPUT_DIR", raw.get("output_dir", "./output")))
+        output_dir = Path(os.getenv("OUTPUT_DIR", raw.get("output_dir", "./output")))
         return cls(
             output_dir=output_dir,
             log_level=os.getenv("LOG_LEVEL", raw.get("log_level", "INFO")),
             sources=raw.get("sources", {}),
-            reports=raw.get("reports", {}),
+            views=raw.get("views", {}),
         )

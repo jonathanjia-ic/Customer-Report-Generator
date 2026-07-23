@@ -2,29 +2,26 @@ output_dir: ./output
 log_level: INFO
 
 sources:
-  core_banking:
-    dsn_env: CORE_BANKING_DSN
+  primary:
+    dsn_env: PRIMARY_DSN
     timeout_seconds: 30
-  crm:
-    dsn_env: CRM_DSN
+  secondary:
+    dsn_env: SECONDARY_DSN
     timeout_seconds: 30
-  marketing_data_warehouse:
-    account_env: MDW_ACCOUNT
-    warehouse_env: MDW_WAREHOUSE
+  archive:
+    account_env: ARCHIVE_ACCOUNT
+    warehouse_env: ARCHIVE_WAREHOUSE
 
-reports:
-  melbourne-metro:
+views:
+  region-north:
     scheduled: true
     cadence: weekly
     format: xlsx
-    audience: VIC Retail Regional Managers
-  sydney-metro:
+  site:
     scheduled: true
     cadence: weekly
     format: xlsx
-    audience: NSW Retail Regional Managers
-  home-loan-portfolio:
+  tagged:
     scheduled: true
     cadence: monthly
     format: xlsx
-    audience: Mortgages Product Team

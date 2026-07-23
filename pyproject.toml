@@ -1,9 +1,9 @@
 [project]
-name = "region-based-customer-reporting"
+name = "record-service"
 version = "1.4.2"
-description = "Internal region based customer reporting"
+description = "Internal record view generation service"
 requires-python = ">=3.10"
-authors = [{ name = "Customer Insights", email = "customer-insights@example.internal" }]
+authors = [{ name = "Platform Team", email = "platform@example.internal" }]
 dependencies = [
     "pandas>=2.1",
     "openpyxl>=3.1",
@@ -18,7 +18,7 @@ dependencies = [
 dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.1"]
 
 [project.scripts]
-report-generator = "report_generator.cli:cli"
+record-service = "record_service.cli:cli"
 
 [build-system]
 requires = ["setuptools>=68"]

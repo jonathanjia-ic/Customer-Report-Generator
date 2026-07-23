@@ -8,7 +8,7 @@ dist/
 build/
 *.egg-info/
 
-# Generated report output — never commit customer data
+# Generated output — never commit source data
 output/
 *.xlsx
 *.pdf
