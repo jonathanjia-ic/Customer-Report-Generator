@@ -4,6 +4,7 @@ Each view subclasses :class:`~record_service.views.base.View` and is
 registered in :data:`REGISTRY` under its CLI slug.
 """
 
+from .active_view import ActiveView
 from .base import View
 from .region_view import RegionView
 from .site_view import SiteView
@@ -13,6 +14,7 @@ REGISTRY: dict[str, type[View]] = {
     "region-north": RegionView,
     "site": SiteView,
     "tagged": TaggedView,
+    "active": ActiveView,
 }
 
 __all__ = [
@@ -21,4 +23,5 @@ __all__ = [
     "RegionView",
     "SiteView",
     "TaggedView",
+    "ActiveView",
 ]

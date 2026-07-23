@@ -25,3 +25,7 @@ views:
     scheduled: true
     cadence: monthly
     format: xlsx
+  active:
+    scheduled: true
+    cadence: daily
+    format: csv
