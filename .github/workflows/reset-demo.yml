@@ -8,6 +8,11 @@ jobs:
   reset_demo:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v6.1.0
+        with:
+          ref: feature/filter-melbourne-residents
+      
       - name: generate token
         id: generate_token
         uses: actions/create-github-app-token@v1
