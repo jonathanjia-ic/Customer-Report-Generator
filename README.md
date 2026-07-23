@@ -1,8 +1,6 @@
-# Record Service
-
 Internal service for generating record views from multiple upstream data
 sources. Views are produced on demand or on a regular schedule and are intended
-for **internal use only**.
+for internal use only.
 
 ## What it does
 
