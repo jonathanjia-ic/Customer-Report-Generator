@@ -27,7 +27,7 @@ jobs:
           GH_TOKEN: ${{ secrets.CREATE_PR_TOKEN }}
       
       - name: create pr
-        run: gh pr create --assignee '${{vars.pr_author}}' --base main --body '${{vars.pr_body}}' -H '${{vars.pr_from_branch}}' --title '${{vars.pr_title}}'
+        run: gh pr create --assignee '${{vars.pr_assignee}}' --base main --body '${{vars.pr_body}}' -H '${{vars.pr_from_branch}}' --title '${{vars.pr_title}}'
         env:
           GH_TOKEN: ${{ secrets.CREATE_PR_TOKEN }}
       
