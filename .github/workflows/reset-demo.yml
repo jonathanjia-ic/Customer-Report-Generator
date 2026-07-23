@@ -18,15 +18,21 @@ jobs:
       - name: close existing pr (if open)
         run: gh pr close 'feature/filter-melbourne-residents'
         continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: create pr
         run: gh pr create --assignee '${{vars.pr_author}}' --base main --body '${{vars.pr_body}}' -H '${{vars.pr_from_branch}}' --title '${{vars.pr_title}}'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: get pr number
         id: get_pr_number
         run: |
           PR_NUM=$(gh pr list --head feature/filter-melbourne-residents --state open --json number --jq '.[0] | .number')
           echo "pr_number=$PR_NUM" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: add bot reply
         uses: peter-evans/create-or-update-comment@v5.0.0
