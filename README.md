@@ -16,6 +16,7 @@ for internal use only.
 | Region View | Weekly    | Records in a given region |
 | Site View   | Weekly    | Records at selected sites  |
 | Tagged View | Monthly   | Records with a given tag  |
+| Active View | Daily     | Records in the active state |
 
 ## Quick start
 
